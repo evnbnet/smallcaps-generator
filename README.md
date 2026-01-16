@@ -1,6 +1,6 @@
 <h1 align="center">Smallcaps Generator</h1>
 
-<p align="center">A minimal web tool to convert text into **small caps** using Unicode characters.</p>
+<p align="center">A minimal web tool to convert text into <strong>small caps</strong> using Unicode characters.</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Astro-000000?style=flat&logo=astro&logoColor=white" />
