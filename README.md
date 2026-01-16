@@ -36,6 +36,8 @@ Hello World 123
 ## Local development
 
 ```bash
+git clone https://github.com/evnbnet/smallcaps-generator.git
+cd smallcaps-generator
 npm install
 npm run dev
 
