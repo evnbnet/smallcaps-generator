@@ -1,0 +1,74 @@
+<div class="flex flex-col items-center justify-center gap-6 h-screen overflow-hidden">
+
+  <div class="text-center">
+    <h1 class="text-[#d5d5d4] text-2xl font-semibold">
+      Smallcaps Generator
+    </h1>
+    <p class="text-gray-400">
+      Convert your text to smallcaps style
+    </p>
+    <p class="text-gray-600 text-[12px]">
+      (With some fonts, small caps may not be visible.)
+    </p>
+  </div>
+
+  <div class="flex gap-4">
+    <textarea
+      id="input"
+      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
+      placeholder="Enter your text here..."></textarea>
+
+    <textarea
+      id="output"
+      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
+      readonly
+      placeholder="Small caps output will appear here..."></textarea>
+  </div>
+
+  <div class="w-[720px] flex justify-end">
+    <button id="copy" 
+    class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-10 hover:bg-[#2a2a2a] transition-all">
+    Copy</button>
+  </div>
+  <div
+    id="toast"
+    class="fixed top-6 bottom-auto   right-6 opacity-0 pointer-events-none
+           bg-green-500/10 border border-green-400/30] text-green-300
+          px-4 py-2 rounded-lg text-sm
+          transition-opacity duration-300"
+  >
+    Copied to clipboard
+  </div>
+
+
+</div>
+
+<script>
+  import { convertToSmallCaps } from '../utils/smallcaps';
+
+  const input = document.getElementById('input') as HTMLTextAreaElement | null;
+  const output = document.getElementById('output') as HTMLTextAreaElement | null;
+  const copyButton = document.getElementById('copy') as HTMLButtonElement | null;
+  const toast = document.getElementById('toast');
+
+  input?.addEventListener('input', () => {
+    if (!input || !output) return;
+    output.value = convertToSmallCaps(input.value);
+  });
+
+  copyButton?.addEventListener('click', async () => {
+    if (!output || !toast) return;
+
+    await navigator.clipboard.writeText(output.value);
+
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2000);
+  });
+</script>
+
+
