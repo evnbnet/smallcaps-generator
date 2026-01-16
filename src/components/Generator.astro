@@ -1,45 +1,45 @@
-<div class="flex flex-col items-center justify-center gap-6 h-screen overflow-hidden">
+<div class="flex flex-col items-center justify-center gap-4 sm:gap-6 min-h-screen overflow-hidden px-4 py-8">
 
   <div class="text-center">
-    <h1 class="text-[#d5d5d4] text-2xl font-semibold">
+    <h1 class="text-[#d5d5d4] text-xl sm:text-2xl font-semibold">
       Smallcaps Generator
     </h1>
-    <p class="text-gray-400">
+    <p class="text-gray-400 text-sm sm:text-base">
       Convert your text to smallcaps style
     </p>
-    <p class="text-gray-600 text-[12px]">
+    <p class="text-gray-600 text-[11px] sm:text-[12px]">
       (With some fonts, small caps may not be visible.)
     </p>
   </div>
 
-  <div class="flex gap-4">
+  <div class="flex flex-col sm:flex-row gap-4 w-full max-w-[720px]">
     <textarea
       id="input"
-      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
+      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-full sm:w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
       placeholder="Enter your text here..."></textarea>
 
     <textarea
       id="output"
-      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
+      class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-3 h-32 w-full sm:w-[360px] resize-none outline-none focus:border-[#737373] focus:ring-2 ring-[#373737]/50 transition-all"
       readonly
       placeholder="Small caps output will appear here..."></textarea>
   </div>
 
-  <div class="w-[720px] flex justify-end">
+  <div class="w-full max-w-[720px] flex justify-end px-4 sm:px-0">
     <button id="copy" 
-    class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-10 hover:bg-[#2a2a2a] transition-all">
+    class="bg-[#141415] border border-[#373737] rounded-lg text-white py-2 px-10 hover:bg-[#2a2a2a] transition-all w-full sm:w-auto">
     Copy</button>
   </div>
+  
   <div
     id="toast"
-    class="fixed top-6 bottom-auto   right-6 opacity-0 pointer-events-none
-           bg-green-500/10 border border-green-400/30] text-green-300
+    class="fixed top-6 right-4 sm:right-6 opacity-0 pointer-events-none
+           bg-green-500/10 border border-green-400/30 text-green-300
           px-4 py-2 rounded-lg text-sm
           transition-opacity duration-300"
   >
     Copied to clipboard
   </div>
-
 
 </div>
 
@@ -70,5 +70,3 @@
     }, 2000);
   });
 </script>
-
-
