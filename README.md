@@ -1,46 +1,41 @@
-# Astro Starter Kit: Basics
+<h1 align="center">Smallcaps Generator</h1>
 
-```sh
-npm create astro@latest -- --template basics
+A minimal web tool to convert text into **small caps** using Unicode characters.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Astro-000000?style=flat&logo=astro&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-000000?style=flat&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-000000?style=flat" />
+</p>
+
+---
+
+## Features
+
+- Real-time small caps conversion
+- Letters and numbers support
+- Clean and minimal UI
+- Copy to clipboard
+- No tracking, no ads
+
+## Example
+
+```
+Hello World 123
+↓
+ʜᴇʟʟᴏ ᴡᴏʀʟᴅ 𝟣𝟤𝟥
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech stack
 
-## 🚀 Project Structure
+- Astro
+- Tailwind CSS
+- Vanilla JavaScript
+- Unicode small caps
 
-Inside of your Astro project, you'll see the following folders and files:
+## Local development
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+```bash
+npm install
+npm run dev
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
